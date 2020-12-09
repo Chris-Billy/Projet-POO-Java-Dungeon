@@ -1,7 +1,7 @@
 package com.company;
 
 public class Sword extends Equipments {
-    int swordDamage;
+    int swordDamage = 10;
 
     public Sword(String[] weaponType, int swordDamage) {
         super(weaponType);
