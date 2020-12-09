@@ -13,4 +13,20 @@ public class Character {
         this.life = life;
         this.atk = atk;
     }
+
+    public String getCharacterType() {
+        return characterType;
+    }
+
+    public int getLifeMax() {
+        return lifeMax;
+    }
+
+    public int getLife() {
+        return life;
+    }
+
+    public int getAtk() {
+        return atk;
+    }
 }
