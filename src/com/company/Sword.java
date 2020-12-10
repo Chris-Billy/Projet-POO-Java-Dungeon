@@ -7,4 +7,7 @@ public class Sword extends Equipments {
         super(weaponType);
         this.swordDamage = swordDamage;
     }
+
+    void applyCriticalStrike(Enemy){
+    }
 }

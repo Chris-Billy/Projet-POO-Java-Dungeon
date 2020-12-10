@@ -6,4 +6,6 @@ public class Equipments {
     public Equipments(String[] weaponType) {
         this.weaponType = weaponType;
     }
+
+
 }
