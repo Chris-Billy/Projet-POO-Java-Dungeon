@@ -1,5 +1,7 @@
 package com.company;
 
+import java.sql.SQLOutput;
+
 public class Character {
 
     protected String characterType;
@@ -28,5 +30,32 @@ public class Character {
 
     public int getAtk() {
         return atk;
+    }
+
+    public static void combat(Adventurer player,Character ennemie){
+        String commande;
+        while(player.life > 0 && ennemie.life > 0){
+            if(ennemie.characterType == "Barbare"){
+                ((Barbarian) ennemie).attack(player);
+                commande = "sword";
+                System.out.println("vous avez: "+player.life+ " point de vie");
+            }else{
+                ((Wizzard) ennemie).attack(player);
+                commande = "flask";
+            }
+            boolean isValid =  Dongeon.CheckCommand(commande);
+            if(ennemie.characterType == "Barbare"){
+                if(isValid){
+                    player.attackSword(ennemie);
+                }else{
+
+                }
+
+            }else{
+                if(isValid){
+                    player.attackSword(ennemie);
+                }
+            }
+        }
     }
 }

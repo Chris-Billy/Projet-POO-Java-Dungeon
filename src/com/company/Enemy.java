@@ -17,4 +17,5 @@ public class Enemy {
             return new Wizzard("Magicien", 150, 150, 10);
         }
     }
+
 }
