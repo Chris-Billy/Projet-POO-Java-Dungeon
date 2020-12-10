@@ -1,8 +1,10 @@
 package com.company;
 
 public class Lightning {
-    int lihgtningDamage = 10;
+    private int lihgtningDamage = 10;
 
-
+    public Lightning(int lihgtningDamage) {
+        this.lihgtningDamage = lihgtningDamage;
+    }
 
 }

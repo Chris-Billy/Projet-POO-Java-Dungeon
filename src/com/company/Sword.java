@@ -1,13 +1,9 @@
 package com.company;
 
-public class Sword extends Equipments {
-    int swordDamage = 10;
+public class Sword {
+    private int swordDamage = 10;
 
-    public Sword(String[] weaponType, int swordDamage) {
-        super(weaponType);
+    public Sword(int swordDamage) {
         this.swordDamage = swordDamage;
-    }
-
-    void applyCriticalStrike(Enemy){
     }
 }

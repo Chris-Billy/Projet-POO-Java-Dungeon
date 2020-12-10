@@ -1,6 +1,10 @@
 package com.company;
 
 public class Axe {
-    int axeDamage = 10;
+    private int axeDamage = 10;
+
+    public Axe(int axeDamage) {
+        this.axeDamage = axeDamage;
+    }
 
 }
