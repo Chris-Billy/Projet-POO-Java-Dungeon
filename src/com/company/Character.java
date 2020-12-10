@@ -4,7 +4,7 @@ public class Character {
 
     protected String characterType;
     protected int lifeMax;
-    protected int life;
+    int life;
     protected int atk;
 
     public Character(String characterType, int lifeMax, int life, int atk) {

@@ -12,8 +12,11 @@ public class Barbarian extends Character{
         int i = 1 + (int)(Math.random() * ((3 - 1) + 1));
         if(i<2){
             System.out.println("attaque critique");
+            ennemyObject.life = ennemyObject.life - (this.atk*2);
+
         }else {
             System.out.println("Attaque normale");
+            ennemyObject.life = ennemyObject.life - this.atk;
         }
 
 
