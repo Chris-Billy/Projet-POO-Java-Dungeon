@@ -1,8 +1,8 @@
 package com.company;
 
 public class Adventurer  extends Character{
-    public Adventurer(String characterType, int lifeMax, int life, int atk) {
-        super(characterType, lifeMax, life, atk);
+    public Adventurer(String characterType, int life, int atk) {
+        super(characterType, life, atk);
     }
     public void attackSword(Character ennemyObject){
         if(ennemyObject.characterType == "Barbare"){

@@ -16,7 +16,7 @@ public class Dongeon {
          Character enemy;
 
 
-        Adventurer player = new Adventurer("player",100,100,34);
+        Adventurer player = new Adventurer("player",100,34);
         while (nbRoom !=5){
             Room first = new Room();
             enemy = first.randomEnemy();
