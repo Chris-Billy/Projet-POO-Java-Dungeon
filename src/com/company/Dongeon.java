@@ -2,6 +2,13 @@ package com.company;
 import java.util.Scanner;
 
 public class Dongeon {
+    private Room[] mTotalRooms = new Room[5];
+
+    public Dongeon() {
+        for (int i = 0; i < mTotalRooms.length; i++) {
+            this.mTotalRooms[i] = new Room();
+        }
+    }
 
     public static void main(String[] args) {
         int nbRoom = 0;
@@ -18,7 +25,6 @@ public class Dongeon {
             }
             attaque(player,ennemie);
         }
-
 
 
     }
