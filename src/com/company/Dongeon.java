@@ -1,4 +1,5 @@
 package com.company;
+import java.sql.SQLOutput;
 import java.util.Scanner;
 
 public class Dongeon {
@@ -13,18 +14,18 @@ public class Dongeon {
     public static void main(String[] args) {
         int nbRoom = 0;
 
-         Character enemy;
+        Character enemy;
 
 
         Adventurer player = new Adventurer("player",100,34);
         while (nbRoom !=5){
             Room first = new Room();
+            System.out.println("Vous entrez dans une nouvelle salle, il y a un ennemie devant vous!");
             enemy = first.randomEnemy();
             enemy.combat(player,enemy);
-            nbRoom = 5;
-
+            nbRoom++;
         }
-
+        System.out.println("Vous avez gagné, vous entrez dans une nouvelle piece avec un trésor bien joué a vous!");
 
     }
     public static boolean CheckCommand(String commands){
