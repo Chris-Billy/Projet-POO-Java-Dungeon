@@ -9,14 +9,14 @@ public class Equipments {
 //        enemyWeaponAtq(test2);
 //        heroWeaponAtq(test);
 //        heroWeaponAtq(test2);
-        enemyWeaponAtq(test);
+        //enemyWeaponAtq(test);
     }
 
     public Equipments() {
     }
 
 
-    public int enemyWeaponAtq(Character enemy){
+    /*public int enemyWeaponAtq(Character enemy){
         if (enemy.characterType.equals("Barbarian")){
             enemy.atk = Axe.axeDamage;
             return Axe.axeDamage;
@@ -25,6 +25,6 @@ public class Equipments {
             System.out.println(Lightning.lihgtningDamage);
             return Lightning.lihgtningDamage;
         }
-    }
+    }*/
 
 }

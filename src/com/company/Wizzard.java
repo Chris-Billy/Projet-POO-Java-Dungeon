@@ -6,9 +6,9 @@ public class Wizzard extends Character {
     }
 
     public boolean attack(Adventurer ennemyObject) {
-
-        int result[] = Lightning.lightningDealDamage();
-
+        Lightning eclair = new Lightning();
+        int result[] = eclair.lightningDealDamage();
+        eclair = null;
         if (result[1] == 1) {
             System.out.println("l'attaque du magicien vous a paralisé");
             ennemyObject.life = ennemyObject.life - result[0];

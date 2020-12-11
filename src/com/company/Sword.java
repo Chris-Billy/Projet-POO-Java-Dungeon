@@ -1,14 +1,12 @@
 package com.company;
 
 public class Sword {
-    public static int swordDamage = 10;
-
-    public Sword(int swordDamage) {
-        this.swordDamage = swordDamage;
-    }
+    private int swordDamage = 10;
 
 
-    public static Boolean swordCritic() {
+
+
+    public Boolean swordCritic() {
         int nb = 1 + (int)(Math.random() * ((10 - 1) + 1));
         if (nb == 1){
             return true;
@@ -19,7 +17,7 @@ public class Sword {
     }
 
 
-    public static int[] swordDealDamage(){
+    public int[] swordDealDamage(){
         int[] tab = new int[2];
         if (swordCritic()){
             tab[0] = swordDamage * 2;

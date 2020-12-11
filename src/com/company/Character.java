@@ -36,21 +36,23 @@ public class Character {
             if(headShot == false){
                 if(ennemie.characterType == "Barbare"){
                     ((Barbarian) ennemie).attack(player);
+                    if(player.life <= 0){
+                        System.out.println("vous avez perdu");
+                        System.exit(0);
+                    }
                     System.out.println("l'ennemie est vulnérable a votre épée");
                     commande = "sword";
                     System.out.println("vous avez: "+player.life+ " point de vie");
                 }else{
                     isStunt = ((Wizzard) ennemie).attack(player);
+                    if(player.life <= 0){
+                        System.out.println("vous avez perdu");
+                        System.exit(0);
+                    }
                     System.out.println("l'ennemie est vulnérable a votre flasque");
                     commande = "flask";
                     System.out.println("vous avez: "+player.life+ " point de vie");
                 }
-            }
-
-
-            if(player.life == 0){
-                System.out.println("vous avez perdu");
-                System.exit(0);
             }
 
 

@@ -4,7 +4,7 @@ package com.company;
 public class Room {
     Character enemy;
 
-    public static Character randomEnemy() {
+    public Character randomEnemy() {
 
         int enemy = 1 + (int) (Math.random() * ((2 - 1) + 1));
 

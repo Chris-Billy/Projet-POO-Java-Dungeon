@@ -8,8 +8,9 @@ public class Adventurer extends Character {
     public int nbWaterFlask = 0;
 
     public boolean attackSword(Character ennemyObject) {
-
-        int[] result = Sword.swordDealDamage();
+        Sword epee = new Sword();
+        int[] result = epee.swordDealDamage();
+        epee = null;
         if (result[1] == 1) {
             System.out.println("vous avez toucher le barbare a la tete il est étourdit, profitez-en!");
             int damage = result[0];
@@ -30,8 +31,8 @@ public class Adventurer extends Character {
 
     public void attackFlask(Character ennemyObject) {
 
-        //Water_flask damageWater = new Water_flask();
-        int damage = Water_flask.flaskDamage(nbWaterFlask);
+        Water_flask damageWater = new Water_flask();
+        int damage = damageWater.flaskDamage(nbWaterFlask);
         nbWaterFlask++;
         ennemyObject.life -= damage;
         System.out.println("vous infligez au magicien: " + damage + " point de vie");
