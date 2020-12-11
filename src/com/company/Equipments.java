@@ -2,17 +2,23 @@ package com.company;
 
 public class Equipments {
 
-    public static void main(String[] args) {
-        System.out.println(Axe.axeDamage);
+    public void main(String[] args) {
+        Character test = new Barbarian("Barbarian", 100, 15);
+//        Character test2 = new Wizzard("Magician", 100, 25);
+//        enemyWeaponAtq(test);
+//        enemyWeaponAtq(test2);
+//        heroWeaponAtq(test);
+//        heroWeaponAtq(test2);
+        enemyWeaponAtq(test);
     }
 
     public Equipments() {
     }
-    /* L'appel vers la class Axe et toutes autre marche mais il faut ajouter une comparaison de string pour le faire automatiquement*/
-/*
-    public static int heroWeapon(Enemy String){
-        if ("Barbarian".equals(Enemy)){
-            System.out.println(Axe.axeDamage);
+
+
+    public int enemyWeaponAtq(Character enemy){
+        if (enemy.characterType.equals("Barbarian")){
+            enemy.atk = Axe.axeDamage;
             return Axe.axeDamage;
         }
         else {
@@ -21,15 +27,4 @@ public class Equipments {
         }
     }
 
-    public static int enemyWeapon(){
-        if (Enemy == ("Barbarian")){
-            System.out.println(Axe.axeDamage);
-            return Axe.axeDamage;
-        }
-        else {
-            System.out.println(Lightning.lihgtningDamage);
-            return Lightning.lihgtningDamage;
-        }
-    }
-*/
 }

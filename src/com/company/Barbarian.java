@@ -4,8 +4,8 @@ import java.util.Objects;
 
 public class Barbarian extends Character{
 
-    public Barbarian(String characterType, int lifeMax, int life, int atk) {
-        super(characterType, lifeMax, life, atk);
+    public Barbarian(String characterType, int life, int atk) {
+        super(characterType, life, atk);
     }
 
     public void attack(Character ennemyObject){
@@ -22,8 +22,6 @@ public class Barbarian extends Character{
             ennemyObject.life = ennemyObject.life - this.atk;
             System.out.println("le barbares vous fait "+this.atk+" dégats");
         }
-
-
     }
 }
 

@@ -17,7 +17,7 @@ public class Dongeon {
         Character enemy;
 
 
-        Adventurer player = new Adventurer("player",100,1000,34);
+        Adventurer player = new Adventurer("player",100,34);
         while (nbRoom !=5){
             Room first = new Room();
             System.out.println("Vous entrez dans une nouvelle salle, il y a un ennemie devant vous!");
@@ -38,6 +38,9 @@ public class Dongeon {
 
 
 
+    public static void printInfo(Character player,Character ennemie){
+        System.out.println("il vous reste:"+player.life+" point de vie");
 
+    }
 
 }

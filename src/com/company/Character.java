@@ -5,23 +5,17 @@ import java.sql.SQLOutput;
 public class Character {
 
     protected String characterType;
-    protected int lifeMax;
     int life;
     protected int atk;
 
-    public Character(String characterType, int lifeMax, int life, int atk) {
+    public Character(String characterType, int life, int atk) {
         this.characterType = characterType;
-        this.lifeMax = lifeMax;
         this.life = life;
         this.atk = atk;
     }
 
     public String getCharacterType() {
         return characterType;
-    }
-
-    public int getLifeMax() {
-        return lifeMax;
     }
 
     public int getLife() {
