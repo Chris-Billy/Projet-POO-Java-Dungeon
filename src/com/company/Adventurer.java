@@ -1,12 +1,29 @@
 package com.company;
 
+/***
+ * Classe représentant un Aventurier
+ */
 public class Adventurer extends Character {
+    /***
+     * Constructeur de l'aventurier
+     * @param characterType Type du personnage (String)
+     * @param life point de vie du personnage (Int)
+     * @param atk point d'attaque du personnage (Object)
+     */
     public Adventurer(String characterType, int life, int atk) {
         super(characterType, life, atk);
     }
 
+    /***
+     * Réprésente le nombre de water flask qui a été lancé par l'aventurier durant un combat
+     */
     public int nbWaterFlask = 0;
 
+    /***
+     * Attaquer un ennemi à l'épée avec possibilité de l'étourdir
+     * @param ennemyObject l'ennemi ciblé par l'attaque (Object)
+     * @return Vrai si l'ennemi est étourdit, sinon Faux pour attaquer normalement
+     */
     public boolean attackSword(Character ennemyObject) {
         Sword epee = new Sword();
         int[] result = epee.swordDealDamage();
@@ -25,10 +42,12 @@ public class Adventurer extends Character {
             System.out.println("il reste au barbare: " + ennemyObject.life + " point de vie");
             return false;
         }
-
-
     }
 
+    /***
+     * Attaquer un ennemi à la flasque deau
+     * @param ennemyObject l'ennemi ciblé par l'attaque (Object)
+     */
     public void attackFlask(Character ennemyObject) {
 
         Water_flask damageWater = new Water_flask();

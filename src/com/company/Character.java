@@ -1,37 +1,36 @@
 package com.company;
 
-import java.sql.SQLOutput;
-
+/***
+ * Représente un personnage
+ */
 public class Character {
 
     protected String characterType;
     int life;
     protected int atk;
 
+    /**
+     * Constructeur d'un personnage
+     * @param characterType Type du personnage (String)
+     * @param life point de vie du personnage (Int)
+     * @param atk point d'attaque du personnage (Object)
+     */
     public Character(String characterType, int life, int atk) {
         this.characterType = characterType;
         this.life = life;
         this.atk = atk;
     }
 
-    public String getCharacterType() {
-        return characterType;
-    }
-
-    public int getLife() {
-        return life;
-    }
-
-    public int getAtk() {
-        return atk;
-    }
-
+    /***
+     * Permet de lancer un combat entre deux personnages
+     * @param player une instance de personnage (Object)
+     * @param ennemie une instance de personnage (Object)
+     */
     public static void combat(Adventurer player,Character ennemie){
         String commande = "";
         boolean headShot = false;
         while(player.life > 0 && ennemie.life > 0){
             boolean isStunt = false;
-
 
             if(headShot == false){
                 if(ennemie.characterType == "Barbare"){
@@ -55,7 +54,6 @@ public class Character {
                 }
             }
 
-
             if (isStunt == false){
                 boolean isValid =  Dongeon.CheckCommand(commande);
                 if(ennemie.characterType == "Barbare"){
@@ -64,11 +62,9 @@ public class Character {
                     }else{
                         System.out.println("cette arme n'existe pas vous passez votre tour");
                     }
-
                 }else{
                     if(isValid){
                         player.attackFlask(ennemie);
-
                     }else{
                         System.out.println("cette arme n'existe pas vous passez votre tour");
                     }
@@ -76,7 +72,6 @@ public class Character {
             }else{
                 System.out.println("vous etes paralyser vous ne pouvez pas attaquer");
             }
-
         }
         player.nbWaterFlask = 0;
     }

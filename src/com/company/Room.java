@@ -1,11 +1,16 @@
 package com.company;
 
-//    Contient un ennemi généré aléatoirement
+/***
+ * Réprésente la classe salle
+ */
 public class Room {
     Character enemy;
 
+    /***
+     * Créé un ennemi aléatoirement
+     * @return une instance d'ennemi (Object)
+     */
     public Character randomEnemy() {
-
         int enemy = 1 + (int) (Math.random() * ((2 - 1) + 1));
 
         if (enemy == 1) {
