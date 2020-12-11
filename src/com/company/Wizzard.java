@@ -6,17 +6,18 @@ public class Wizzard extends Character {
     }
 
     public boolean attack(Adventurer ennemyObject) {
-        int i = 1 + (int) (Math.random() * ((10 - 1) + 1));
 
-        if (i < 2) {
+        int result[] = Lightning.lightningDealDamage();
+
+        if (result[1] == 1) {
             System.out.println("l'attaque du magicien vous a paralisé");
-            ennemyObject.life = ennemyObject.life - this.atk;
-            System.out.println("le magicien vous fait "+this.atk+" dégats");
+            ennemyObject.life = ennemyObject.life - result[0];
+            System.out.println("le magicien vous fait "+result[0]+" dégats");
             return true;
         } else {
             System.out.println("le magicien attaque");
-            ennemyObject.life = ennemyObject.life - this.atk;
-            System.out.println("le magicien vous fait "+this.atk+" dégats");
+            ennemyObject.life = ennemyObject.life - result[0];
+            System.out.println("le magicien vous fait "+result[0]+" dégats");
             return false;
         }
     }
